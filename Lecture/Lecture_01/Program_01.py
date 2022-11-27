@@ -20,7 +20,6 @@ i = []                               # строки
 g = input()                          # считать данные (по умолчанию тип данных str)
 k = int(input())                     
 
-
 text = 'привет, мир!'
 print(len(text))                    # 12 - количество строк
 print('мир' in text)                # True
@@ -34,12 +33,13 @@ print(text [0])                     # п
 print(text [1])                     # р
 print(text [len(text) - 1])         # !
 print(text [-4])                    # м
-print(text [:])                     # привет, мир!     автоматически print(text [0 : len(text) - 1])   (срезы)
+print(text [:])                     # привет, мир!     автоматически text [0 : len(text) - 1]   (срезы)
 print(text [: 2])                   # пр               или [0 : 2]
 print(text [len(text) - 2:])        # р!
 print(text [2 : 4])                 # ив
 print(text [4 : -6])                # ет
 print(text [0 : len(text) : 3])     # пв,и             или [::3]
+print(text [::-1])                  # !рим ,тевирп     разворот 
 
 # Списки
 
