@@ -3,21 +3,22 @@
 print('Введите координаты точки')
 x = int(input('x = '))
 y = int(input('y = '))
-if x > 0 and y > 0:
+
+if x > 0 < y:
     print('1 четверть')
-elif x > 0 and y < 0:
+elif x > 0 > y:
     print('4 четверть')
-elif x < 0 and y > 0:
+elif x < 0 < y:
     print('2 четверть')
-elif x < 0 and y < 0:
+elif x < 0 > y:
     print('3 четверть')
-elif x > 0 and y == 0:
+elif x > 0 == y:
     print('точка на положительной части оси абсцисс')
-elif x == 0 and y > 0:
+elif x == 0 < y:
     print('точка на положительной части оси ординат')
-elif x == 0 and y < 0:
+elif x == 0 > y:
     print('точка на отрицательной части оси ординат')
-elif x < 0 and y == 0:
+elif x < 0 == y:
     print('точка на отрицательной части оси абсцисс')
 else:
     print('точка расположена в центре системы координат')

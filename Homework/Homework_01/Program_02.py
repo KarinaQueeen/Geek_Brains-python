@@ -1,7 +1,13 @@
 # Программа доказывает, что выражение ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z истинно для всех значений предикат
 
-print('Введите значения логических выражений (1 или 0)')
-a = int(input('1 предикат:'))
-b = int(input('2 предикат:'))
-c = int(input('3 предикат:'))
-print (((not(a or b or c)) == (not a and not b and not c)))
+result = []
+for x in [True, False]:
+    for y in [True, False]:
+        for z in [True, False]:
+            result.append(not (x or y or z) == (not x and not y and not z))
+print(all(result))
+
+# или
+
+print(all((not (x or y or z) == (not x and not y and not z))
+      for x in range(2) for y in range(2) for z in range(2)))
