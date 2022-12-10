@@ -1,12 +1,14 @@
-# Программа находит максимальное из 5 чисел    
+# Программа принимает значение N, выдает отрезок от -N до N.
 
-list = [int(input('Введите число 1: ')), int(input('Введите число 2: ')), int(input('Введите число 3: ')), int(input('Введите число 4: ')), int(input('Введите число 5: '))]
-print('Максимальное число:', max(list))
+num = int(input('Введите число: '))
+new_list = list(range(-num, num + 1))
 
-# или 
+print(new_list)
 
-max = list [0]
-for i in list:
-    if i > max:
-        max = i
-print(max)
+# или
+
+print(*new_list, sep=',')
+
+# или
+
+[print(i, end=',') for i in new_list]

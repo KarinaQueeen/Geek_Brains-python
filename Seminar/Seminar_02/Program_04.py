@@ -1,13 +1,17 @@
-# Программа принимает две строки, и определяет количество вхождений одной строки в другую
+# Программа определяет количество заданного слова в тексте.
 
-text = input('Введите текст ► ')
-word = input('Введите слово ► ')
+text = input('Введите текст: ')
+word = input('Введите слово: ')
+
 print(text.count(word))
 
 # или
+# для поиска вхождений с наложением
 
-inkrement = 0                            # для поиска вхождений с наложением
-for i in range(len(tex)):
-    if word in text[i: i + len(word)]:   # можно конец не указывать [i:]  
-        inkrement += 1
-print(inkrement)
+count = 0         
+                   
+for i in range(len(text)):
+    if word in text[i: i + len(word)]:
+        count += 1
+
+print(count)

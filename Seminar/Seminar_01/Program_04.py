@@ -1,7 +1,18 @@
-# Программа принимает значение N, выдает отрезок от -N до N
+# Программа выдает перове цифру дробной части числа.
 
-num = int(input('Введите число: '))
-new_list = list (range(-num, num + 1))
-print(new_list)
-print(*new_list, sep = ',')                            # распоковка
-[print(i, end = ',') for i in new_list]
+num = float(input('Введите дробное число: '))
+
+a = num - int(num)
+a = int(a * 10)
+
+print(a)
+
+# или
+
+print(int(10 * num) % 10)
+
+# или
+
+n = input('Введите дробное число: ').split('.')    
+
+print(n[-1][0])                                     

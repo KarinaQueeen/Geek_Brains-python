@@ -1,14 +1,33 @@
-# Программа доказывает, что выражение ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z истинно для всех значений предикат.
+# Программа выдаёт последовательность из N членов: 1, -3, 9, -27, 81, … .
 
-result = []
-for x in [True, False]:
-    for y in [True, False]:
-        for z in [True, False]:
-            result.append(not (x or y or z) == (not x and not y and not z))
-print(all(result))
+print('Введите количество членов поседовательности: ')
+num = int(input())
+x = 1
+new_list = []
+
+while num != 0:
+    new_list.append(x)
+    x = x * -3
+    num -= 1
+
+print(*new_list, sep=', ')
 
 # или
 
-print(all((not (x or y or z) == (not x and not y and not z)) for x in range (2) for y in range(2) for z in range(2)))
+for i in range(int(input('Введите количество членов поседовательности: '))):
+    print((-3) ** i, end=' ')
 
+# или
 
+result = [1]
+
+for l in range(int(input('Введите количество членов поседовательности: ')) - 1):
+   result.append(result[-1] * -3)
+
+print(*result, sep=', ')
+    
+# или
+
+n = int(input('Введите количество членов поседовательности: '))
+output = -1 / 3
+print (*(output := int(output * -3) for k in range(n)), sep = ', ')
